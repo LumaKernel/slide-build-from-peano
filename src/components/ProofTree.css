@@ -1,0 +1,71 @@
+.proof-tree {
+  display: inline-flex;
+  justify-content: center;
+  font-size: 1em;
+}
+
+.proof-inference {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.proof-premises {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1.5em;
+}
+
+.proof-premise {
+  display: flex;
+  justify-content: center;
+}
+
+.proof-rule-line-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 0.4em;
+  margin: 0.15em 0;
+}
+
+.proof-rule-line {
+  flex: 1;
+  height: 1px;
+  background-color: currentColor;
+  min-width: 2em;
+}
+
+.proof-rule-label {
+  font-size: 0.75em;
+  white-space: nowrap;
+}
+
+.proof-rule-label-right {
+  order: 1;
+}
+
+.proof-rule-label-left {
+  order: -1;
+}
+
+.proof-conclusion {
+  display: flex;
+  justify-content: center;
+  padding: 0 0.3em;
+}
+
+.proof-formula {
+  display: flex;
+  justify-content: center;
+  padding: 0 0.3em;
+}
+
+.proof-discharged {
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  padding: 0.1em 0.3em;
+}
