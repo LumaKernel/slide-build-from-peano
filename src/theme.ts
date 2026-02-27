@@ -7,8 +7,8 @@ export const theme = {
     quinary: "#0f3460",
   },
   fonts: {
-    header: '"Noto Serif", "Georgia", serif',
-    text: '"Noto Serif", "Georgia", serif',
+    header: '"Noto Serif JP", serif',
+    text: '"Noto Serif JP", serif',
     monospace: '"Fira Code", "Consolas", monospace',
   },
   fontSizes: {
