@@ -1,2 +1,4 @@
 node_modules/
 dist/
+render/target/
+.trash/

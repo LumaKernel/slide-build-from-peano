@@ -1,0 +1,161 @@
+/* Toggle button */
+.speaker-notes-toggle {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 9999;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(30, 30, 60, 0.85);
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: background 0.2s;
+}
+.speaker-notes-toggle:hover {
+  background: rgba(50, 50, 90, 0.95);
+}
+
+/* Inline panel */
+.speaker-notes-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9998;
+  max-height: 40vh;
+  background: #1a1a2e;
+  color: #e0e0e0;
+  border-top: 2px solid #e94560;
+  overflow-y: auto;
+  font-family: "Noto Serif JP", serif;
+}
+.speaker-notes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  border-bottom: 1px solid #333;
+  position: sticky;
+  top: 0;
+  background: #1a1a2e;
+}
+.speaker-notes-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #e94560;
+}
+.speaker-notes-popout-btn {
+  background: none;
+  border: 1px solid #555;
+  color: #ccc;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.speaker-notes-popout-btn:hover {
+  background: #333;
+}
+.speaker-notes-content {
+  padding: 12px 20px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+.speaker-notes-content p {
+  margin: 4px 0;
+}
+.speaker-notes-content p:empty {
+  height: 0.8em;
+}
+
+/* Popout window */
+.speaker-notes-popout {
+  min-height: 100vh;
+  background: #0d0d1a;
+  color: #e0e0e0;
+  font-family: "Noto Serif JP", serif;
+  display: flex;
+  flex-direction: column;
+}
+.speaker-notes-popout-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: #1a1a2e;
+  border-bottom: 2px solid #e94560;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.speaker-notes-popout-info {
+  font-size: 16px;
+  font-weight: bold;
+  color: #e94560;
+}
+.speaker-notes-popout-controls {
+  display: flex;
+  gap: 8px;
+}
+.speaker-notes-nav-btn {
+  background: #2a2a4e;
+  border: 1px solid #555;
+  color: #ccc;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.speaker-notes-nav-btn:hover:not(:disabled) {
+  background: #3a3a6e;
+}
+.speaker-notes-nav-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.speaker-notes-stopwatch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.speaker-notes-time {
+  font-family: "Fira Code", "Consolas", monospace;
+  font-size: 24px;
+  color: #e94560;
+  min-width: 80px;
+  text-align: center;
+}
+.speaker-notes-timer-btn {
+  background: #2a2a4e;
+  border: 1px solid #555;
+  color: #ccc;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.speaker-notes-timer-btn:hover {
+  background: #3a3a6e;
+}
+.speaker-notes-popout-content {
+  flex: 1;
+  padding: 20px 28px;
+  font-size: 20px;
+  line-height: 1.8;
+}
+.speaker-notes-popout-content p {
+  margin: 6px 0;
+}
+.speaker-notes-popout-content p:empty {
+  height: 1em;
+}
