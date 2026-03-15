@@ -33,7 +33,7 @@ export function S07LetIn(): ReactNode {
       </Appear>
       <Appear>
         <Text fontWeight="bold">これを論理式でやる</Text>
-        <BlockMath>{String.raw`\forall u.\, u = a \mathbin{\%} n + b \mathbin{\%} n \to \forall v.\, v = (a + b) \mathbin{\%} n \to (u = v \lor u = n + v)`}</BlockMath>
+        <BlockMath>{String.raw`\forall u.\, u = a \mathbin{\%} n + b \mathbin{\%} n \to \forall v.\, v = (a + b) \mathbin{\%} n \to (u = v \vee u = n + v)`}</BlockMath>
       </Appear>
       <Appear>
         <Text>

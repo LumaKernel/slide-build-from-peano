@@ -50,6 +50,19 @@ export function SpeakerNotesPopout({
     };
   }, [isRunning]);
 
+  // Left/Right arrow key navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "ArrowRight") {
+        send({ type: "navigate", direction: "next" });
+      } else if (e.key === "ArrowLeft") {
+        send({ type: "navigate", direction: "prev" });
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [send]);
+
   const note = notes[slideIndex] ?? "";
 
   return (

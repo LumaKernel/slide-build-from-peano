@@ -24,11 +24,11 @@ export function S06Functions(): ReactNode {
         </Appear>
         <Appear>
           <Text>
-            <InlineMath>{String.raw`n \dotminus m`}</InlineMath>（ドットマイナス）を考える
+            <InlineMath>{String.raw`n \mathbin{\dot{-}} m`}</InlineMath>（ドットマイナス）を考える
           </Text>
         </Appear>
         <Appear>
-          <BlockMath>{String.raw`\exists! x.\, n = x + m \lor (\exists y.\, n + y + 1 = m \land x = 0)`}</BlockMath>
+          <BlockMath>{String.raw`\exists! x.\, n = x + m \vee (\exists y.\, n + y + 1 = m \wedge x = 0)`}</BlockMath>
         </Appear>
         <Appear>
           <Text>
@@ -40,7 +40,7 @@ export function S06Functions(): ReactNode {
 
       <Slide>
         <Heading fontSize="h2">
-          <InlineMath>{String.raw`n \dotminus n = 0`}</InlineMath> を表現してみよう
+          <InlineMath>{String.raw`n \mathbin{\dot{-}} n = 0`}</InlineMath> を表現してみよう
         </Heading>
         <Text>展開するとこうなる:</Text>
         <Text fontSize="18px">

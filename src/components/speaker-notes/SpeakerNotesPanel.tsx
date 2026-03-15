@@ -40,8 +40,12 @@ export function SpeakerNotesPanel({
   const [isOpen, setIsOpen] = useState(false);
   const slideIndex = useSlideIndexFromUrl();
 
-  const handleMessage = useCallback((_msg: SlideSyncMessage) => {
-    // Main window receives navigate commands from popout
+  const handleMessage = useCallback((msg: SlideSyncMessage) => {
+    if (msg.type === "navigate") {
+      // Spectacle listens for ArrowLeft/ArrowRight on the document
+      const key = msg.direction === "next" ? "ArrowRight" : "ArrowLeft";
+      document.dispatchEvent(new KeyboardEvent("keydown", { key }));
+    }
   }, []);
 
   const { send } = useSlideSync(handleMessage);

@@ -80,7 +80,7 @@ export function S18Incompleteness(): ReactNode {
         <Appear>
           <Text fontSize="18px" color="gray">
             注意: 任意の <InlineMath>{String.raw`\varphi`}</InlineMath> について{" "}
-            <InlineMath>{String.raw`\vdash \varphi \lor \neg\varphi`}</InlineMath>{" "}
+            <InlineMath>{String.raw`\vdash \varphi \vee \neg\varphi`}</InlineMath>{" "}
             ではない。これは排中律といって、古典論理においては成立する
           </Text>
         </Appear>

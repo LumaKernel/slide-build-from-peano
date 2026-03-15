@@ -23,7 +23,7 @@ export function S14ListDefine(): ReactNode {
 
       <Appear>
         <Text fontWeight="bold" fontSize="22px">含む条件:</Text>
-        <BlockMath>{String.raw`\forall i.\, 0 \leq i < k \to \exists p.\, \text{prime}(p) \land \text{get}_0(l \bmod p) = i`}</BlockMath>
+        <BlockMath>{String.raw`\forall i.\, 0 \leq i < k \to \exists p.\, \text{prime}(p) \wedge \text{get}_0(l \bmod p) = i`}</BlockMath>
       </Appear>
 
       <Appear>
