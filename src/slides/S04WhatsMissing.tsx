@@ -45,8 +45,9 @@ export function S04WhatsMissing(): ReactNode {
 
       <Slide>
         <Heading fontSize="h2">無いものについて考える</Heading>
-        <Text fontWeight="bold">述語とは</Text>
-        <Text>0個以上の（固定の数の）自然数について、真偽が決まるもの</Text>
+        <Appear>
+          <Text><Text fontWeight="bold" style={{ display: "inline" }}>述語</Text>とは — 0個以上の（固定の数の）自然数について、真偽が決まるもの</Text>
+        </Appear>
         <UnorderedList>
           <Appear>
             <ListItem><Text>1以上の自然数である: 1変数述語</Text></ListItem>

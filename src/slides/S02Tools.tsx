@@ -25,7 +25,7 @@ export function S02Tools(): ReactNode {
         <Appear>
           <ListItem>
             <Text>
-              <InlineMath>{String.raw`\forall, \exists`}</InlineMath>
+              量化子: <InlineMath>{String.raw`\forall, \exists`}</InlineMath>
             </Text>
           </ListItem>
         </Appear>
@@ -46,7 +46,7 @@ export function S02Tools(): ReactNode {
         <Appear>
           <ListItem>
             <Text>
-              変数: <InlineMath>{String.raw`a, b, c, x, y, z, \ldots`}</InlineMath>
+              自然数を表わす変数: <InlineMath>{String.raw`a, b, c, x, y, z, \ldots`}</InlineMath>
             </Text>
           </ListItem>
         </Appear>

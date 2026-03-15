@@ -4,10 +4,26 @@ import {
   Heading,
   Text,
   Appear,
+  FlexBox,
+  Box,
   UnorderedList,
   ListItem,
 } from "spectacle";
 import { BlockMath } from "../components/Math.tsx";
+
+function Row({ label, formula, children }: { readonly label: string; readonly formula: string; readonly children?: ReactNode }): ReactNode {
+  return (
+    <FlexBox alignItems="center" justifyContent="flex-start" width="100%">
+      <Box width="20%" flexShrink={0}>
+        <Text fontSize="22px" fontWeight="bold" margin="0">{label}</Text>
+      </Box>
+      <Box width="80%">
+        <BlockMath>{formula}</BlockMath>
+        {children}
+      </Box>
+    </FlexBox>
+  );
+}
 
 export function S05BasicPredicates(): ReactNode {
   return (
@@ -15,24 +31,26 @@ export function S05BasicPredicates(): ReactNode {
       <Slide>
         <Heading fontSize="h2">作ってみよう: 基礎的な述語</Heading>
         <Appear>
-          <BlockMath>{String.raw`a < b \iff \exists n.\, a + n + 1 = b`}</BlockMath>
-          <Text fontSize="18px" color="gray">
-            注記: 厳密には <code>∃n. (a + n) + 1 = b</code> のように2変数関数とみなすが、結合律によりこの書き方をする
-          </Text>
+          <Row label="比較" formula={String.raw`a < b \iff \exists n.\, a + n + 1 = b`}>
+            <Text fontSize="16px" color="gray" margin="0">
+              注記: 厳密には ∃n. (a + n) + 1 = b のように2変数関数とみなすが、結合律によりこの書き方をする
+            </Text>
+          </Row>
         </Appear>
         <Appear>
-          <BlockMath>{String.raw`\text{even}(n) \iff \exists x.\, x + x = n`}</BlockMath>
+          <Row label="偶数" formula={String.raw`\text{even}(n) \iff \exists x.\, x + x = n`} />
         </Appear>
         <Appear>
-          <BlockMath>{String.raw`m \mid n \iff \exists x.\, n = m \times x`}</BlockMath>
+          <Row label="倍数" formula={String.raw`m \mid n \iff \exists x.\, n = m \times x`} />
         </Appear>
         <Appear>
-          <BlockMath>{String.raw`\text{prime}(n) \iff 1 < n \wedge \forall d.\, (1 < d \wedge d < n \rightarrow \neg(d \mid n))`}</BlockMath>
-          <UnorderedList>
-            <ListItem>
-              <Text fontSize="20px">これって許されるの？ → 展開できるよね</Text>
-            </ListItem>
-          </UnorderedList>
+          <Row label="素数" formula={String.raw`\text{prime}(n) \iff 1 < n \wedge \forall d.\, (1 < d \wedge d < n \rightarrow \neg(d \mid n))`}>
+            <UnorderedList>
+              <ListItem>
+                <Text fontSize="20px">これって許されるの？ → 展開できるよね</Text>
+              </ListItem>
+            </UnorderedList>
+          </Row>
         </Appear>
       </Slide>
 
