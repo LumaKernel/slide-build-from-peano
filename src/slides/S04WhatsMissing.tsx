@@ -6,6 +6,8 @@ import {
   UnorderedList,
   ListItem,
   Appear,
+  FlexBox,
+  Box,
 } from "spectacle";
 
 export function S04WhatsMissing(): ReactNode {
@@ -13,26 +15,32 @@ export function S04WhatsMissing(): ReactNode {
     <>
       <Slide>
         <Heading fontSize="h2">ここに無いものってなんだろう</Heading>
-        <Appear>
-          <Text fontWeight="bold">基本的な述語がまずない</Text>
-          <UnorderedList>
-            <ListItem><Text>比較 n &lt; m</Text></ListItem>
-            <ListItem><Text>nは偶数</Text></ListItem>
-            <ListItem><Text>nはmの倍数</Text></ListItem>
-            <ListItem><Text>nは素数</Text></ListItem>
-            <ListItem><Text>nは完全数</Text></ListItem>
-          </UnorderedList>
-        </Appear>
-        <Appear>
-          <Text fontWeight="bold">演算（関数）も色々ない</Text>
-          <UnorderedList>
-            <ListItem><Text>引き算、割り算</Text></ListItem>
-            <ListItem><Text>累乗、階乗</Text></ListItem>
-            <ListItem><Text>n番目の素数</Text></ListItem>
-            <ListItem><Text>整数論の諸関数: 約数関数、オイラーのtotient関数、メビウス関数、素数計数関数</Text></ListItem>
-            <ListItem><Text>巨大数論の諸関数: テトレーション、アッカーマン関数</Text></ListItem>
-          </UnorderedList>
-        </Appear>
+        <FlexBox alignItems="flex-start" justifyContent="center" flexWrap="wrap">
+          <Appear>
+            <Box width="45%" minWidth="360px" padding="0 16px">
+              <Text fontWeight="bold" fontSize="22px">基本的な述語がまずない</Text>
+              <UnorderedList fontSize="18px">
+                <ListItem><Text fontSize="18px">比較 n &lt; m</Text></ListItem>
+                <ListItem><Text fontSize="18px">nは偶数</Text></ListItem>
+                <ListItem><Text fontSize="18px">nはmの倍数</Text></ListItem>
+                <ListItem><Text fontSize="18px">nは素数</Text></ListItem>
+                <ListItem><Text fontSize="18px">nは完全数</Text></ListItem>
+              </UnorderedList>
+            </Box>
+          </Appear>
+          <Appear>
+            <Box width="45%" minWidth="360px" padding="0 16px">
+              <Text fontWeight="bold" fontSize="22px">演算（関数）も色々ない</Text>
+              <UnorderedList fontSize="18px">
+                <ListItem><Text fontSize="18px">引き算、割り算</Text></ListItem>
+                <ListItem><Text fontSize="18px">累乗、階乗</Text></ListItem>
+                <ListItem><Text fontSize="18px">n番目の素数</Text></ListItem>
+                <ListItem><Text fontSize="18px">約数関数、オイラーのtotient関数、メビウス関数、…</Text></ListItem>
+                <ListItem><Text fontSize="18px">テトレーション、アッカーマン関数、…</Text></ListItem>
+              </UnorderedList>
+            </Box>
+          </Appear>
+        </FlexBox>
       </Slide>
 
       <Slide>
