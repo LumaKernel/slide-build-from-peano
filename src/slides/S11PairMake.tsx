@@ -12,16 +12,24 @@ export function S11PairMake(): ReactNode {
     <>
       <Slide>
         <Heading fontSize="h2">ペアを作る関数</Heading>
-        <Text>
-          <InlineMath>{String.raw`f(x, y) := \frac{(x + y)(x + y + 1) + 2y}{2}`}</InlineMath>
-        </Text>
+        <div style={{ fontSize: "32px" }}>
+          <BlockMath>{String.raw`f(x, y) := \frac{(x + y)(x + y + 1) + 2y}{2}`}</BlockMath>
+        </div>
+        <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", alignItems: "baseline", gap: "0 12px", fontFamily: '"Noto Serif JP", serif', fontSize: "28px" }}>
+          <Appear>
+            <span>これでよいだろうか？</span>
+          </Appear>
+          <Appear>
+            <span>→ 割り算が使えない</span>
+          </Appear>
+          <Appear>
+            <span>→ <InlineMath>{String.raw`\exists!`}</InlineMath> の方法を取ろう</span>
+          </Appear>
+        </div>
         <Appear>
-          <Text>
-            これでよいだろうか？ → 割り算が使えない → <InlineMath>{String.raw`\exists!`}</InlineMath> の方法を取ろう
-          </Text>
-        </Appear>
-        <Appear>
-          <BlockMath>{String.raw`\exists! n.\, 2n = (x + y)(x + y + 1) + 2y`}</BlockMath>
+          <div style={{ fontSize: "32px" }}>
+            <BlockMath>{String.raw`\exists! n.\, 2n = (x + y)(x + y + 1) + 2y`}</BlockMath>
+          </div>
           <Text>これでOK</Text>
         </Appear>
       </Slide>
