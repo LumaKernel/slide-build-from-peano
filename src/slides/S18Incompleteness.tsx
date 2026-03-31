@@ -4,10 +4,10 @@ import {
   Heading,
   Text,
   Appear,
-  UnorderedList,
-  ListItem,
+  FlexBox,
 } from "spectacle";
 import { InlineMath } from "../components/Math.tsx";
+import { LegendCard } from "../components/LegendCard.tsx";
 
 export function S18Incompleteness(): ReactNode {
   return (
@@ -15,45 +15,37 @@ export function S18Incompleteness(): ReactNode {
       <Slide>
         <Heading fontSize="h2">この先: 不完全性定理</Heading>
         <Appear>
-          <Text fontSize="22px">まずは証明論を少し</Text>
+          <Text fontSize="20px" style={{ margin: "0 0 4px 0" }}>まずは証明論を少し</Text>
         </Appear>
         <Appear>
-          <Text fontSize="22px">
+          <Text fontSize="20px" style={{ margin: "0 0 8px 0" }}>
             <InlineMath>{String.raw`\vdash \varphi`}</InlineMath> かつ{" "}
             <InlineMath>{String.raw`\vdash \neg\varphi`}</InlineMath>{" "}
             なる論理式 <InlineMath>{String.raw`\varphi`}</InlineMath> が構成できる… とすると
           </Text>
         </Appear>
-        <Appear>
-          <UnorderedList>
-            <ListItem>
-              <Text fontSize="20px">
-                自然数で構造とその間の論理関係（プログラム）が記述できる
-              </Text>
-            </ListItem>
-            <ListItem>
-              <Text fontSize="18px" color="gray">
+        <FlexBox alignItems="stretch" style={{ gap: "14px", width: "100%", marginTop: "4px" }}>
+          <Appear>
+            <LegendCard title="表現力">
+              <Text fontSize="16px" style={{ margin: "0 0 4px 0" }}>自然数で構造とその間の論理関係（プログラム）が記述できる</Text>
+              <Text fontSize="14px" color="gray" style={{ margin: 0 }}>
                 例: <InlineMath>{String.raw`\mathbb{Z}`}</InlineMath> や{" "}
                 <InlineMath>{String.raw`\mathbb{Q}`}</InlineMath>{" "}
                 の議論がペアと同値類で記述できてしまう
               </Text>
-            </ListItem>
-          </UnorderedList>
-        </Appear>
-        <Appear>
-          <Text fontSize="20px">自然数論はとても単純な構造と検証ルールで構成される</Text>
-        </Appear>
-        <Appear>
-          <Text fontSize="20px" fontWeight="bold">自然数論のなかで自然数論が扱える</Text>
-        </Appear>
-        <Appear>
-          <Text fontSize="20px">対角化により、自己言及的な命題が作れる（簡単ではない）</Text>
-        </Appear>
-        <Appear>
-          <Text fontSize="20px" fontWeight="bold" color="yellow">
-            自己を否定するかのような命題が作れる
-          </Text>
-        </Appear>
+            </LegendCard>
+          </Appear>
+          <Appear>
+            <LegendCard title="自己言及">
+              <Text fontSize="16px" style={{ margin: "0 0 4px 0" }}>自然数論はとても単純な構造と検証ルールで構成される</Text>
+              <Text fontSize="16px" fontWeight="bold" style={{ margin: "0 0 4px 0" }}>自然数論のなかで自然数論が扱える</Text>
+              <Text fontSize="16px" style={{ margin: "0 0 4px 0" }}>対角化により、自己言及的な命題が作れる（簡単ではない）</Text>
+              <Text fontSize="16px" fontWeight="bold" color="yellow" style={{ margin: 0 }}>
+                自己を否定するかのような命題が作れる
+              </Text>
+            </LegendCard>
+          </Appear>
+        </FlexBox>
       </Slide>
 
       <Slide>
