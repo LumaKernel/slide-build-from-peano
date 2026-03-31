@@ -8,6 +8,7 @@ import {
   ListItem,
 } from "spectacle";
 import { BlockMath } from "../components/Math.tsx";
+import { fermatExpandedUnicode } from "../formulas/fermatExpanded.ts";
 
 export function S16ExpDone(): ReactNode {
   return (
@@ -21,9 +22,12 @@ export function S16ExpDone(): ReactNode {
           <BlockMath>{String.raw`\forall n.\, n > 2 \to \forall a\, b\, c.\, \neg(a^n + b^n = c^n)`}</BlockMath>
         </Appear>
         <Appear>
-          <Text fontSize="20px" color="gray">
-            （展開したら巨大な論理式になる — ここでは省略）
-          </Text>
+          <Text fontWeight="bold" fontSize="18px" style={{ margin: "0 0 4px 0" }}>展開した論理式（{fermatExpandedUnicode.length.toLocaleString()} 文字）:</Text>
+          <div style={{ overflowY: "auto", maxHeight: "220px", maxWidth: "100%", border: "1px solid rgba(15, 52, 96, 0.15)", borderRadius: "8px", padding: "8px 12px", background: "rgba(15, 52, 96, 0.03)" }}>
+            <p style={{ fontFamily: '"Noto Serif JP", "STIX Two Math", serif', fontSize: "9px", wordBreak: "break-all", lineHeight: 1.8, margin: 0, color: "#1a1a2e" }}>
+              {fermatExpandedUnicode}
+            </p>
+          </div>
         </Appear>
       </Slide>
 
