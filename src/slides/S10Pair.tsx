@@ -6,6 +6,8 @@ import {
   CodeSpan,
 } from "spectacle";
 import { InlineMath, BlockMath } from "../components/Math.tsx";
+import { CantorZigzag } from "../components/CantorZigzag.tsx";
+import { CantorPairingGrid } from "../components/CantorPairingGrid.tsx";
 
 export function S10Pair(): ReactNode {
   return (
@@ -27,25 +29,15 @@ export function S10Pair(): ReactNode {
 
       <Slide>
         <Heading fontSize="h2">ペアと自然数は等濃</Heading>
-        <Text>全単射が存在する</Text>
-        <div style={{ fontFamily: "monospace", fontSize: "18px", lineHeight: 1.8, margin: "8px 0", textAlign: "center" }}>
-          <Text fontSize="18px" fontFamily="monospace">
-            {"(0,0) (0,1) (0,2) (0,3) ..."}{"\n"}
-            {"(1,0) (1,1) (1,2) (1,3) ..."}{"\n"}
-            {"(2,0) (2,1) (2,2) (2,3) ..."}{"\n"}
-            {"(3,0) (3,1) (3,2) (3,3) ..."}
-          </Text>
-        </div>
-        <Text>
-          ジグザグに番号を振っていく。
-          <InlineMath>{String.raw`|\mathbb{N}| = |\mathbb{Q}|`}</InlineMath> とほぼ同じ議論。
+        <Text style={{ margin: "0 0 4px 0" }}>
+          全単射が存在する — ジグザグに番号を振っていく（<InlineMath>{String.raw`|\mathbb{N}| = |\mathbb{Q}|`}</InlineMath> とほぼ同じ議論）
         </Text>
+        <CantorZigzag />
       </Slide>
 
       <Slide>
         <Heading fontSize="h2">カントールのペアリング関数</Heading>
-        <Text>Cantor's pairing function</Text>
-        <BlockMath>{String.raw`f(x, y) := \frac{(x + y)(x + y + 1) + 2y}{2}`}</BlockMath>
+        <CantorPairingGrid />
       </Slide>
     </>
   );
