@@ -43,11 +43,6 @@ function gt(n: string, m: string): string {
   return `(\\exists ${k}.\\, ${n} = ${m} + S(${k}))`;
 }
 
-// n ≥ m: ∃k. n = m + k
-function gte(n: string, m: string): string {
-  const k = freshVar("k");
-  return `(\\exists ${k}.\\, ${n} = ${m} + ${k})`;
-}
 
 // n < m: m > n
 function lt(n: string, m: string): string {

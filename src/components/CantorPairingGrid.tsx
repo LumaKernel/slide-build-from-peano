@@ -83,7 +83,7 @@ export function CantorPairingGrid(): ReactNode {
 
   return (
     <Stepper values={stepperValues} alwaysVisible>
-      {(value: number, _step: number) => {
+      {(value: unknown, _step: number) => {
         const shownCount = typeof value === "number" ? value : 0;
         const currentCell = shownCount > 0 ? zigzagOrder[shownCount - 1] : undefined;
 

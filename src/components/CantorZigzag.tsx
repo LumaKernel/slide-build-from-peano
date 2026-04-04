@@ -23,7 +23,7 @@ function buildCumulativeCounts(size: number): readonly number[] {
 }
 
 const cumulativeCounts = buildCumulativeCounts(GRID_SIZE);
-const numDiags = cumulativeCounts.length - 1;
+
 
 // ジグザグ順のフラット配列
 function generateZigzagOrder(size: number): readonly { readonly x: number; readonly y: number }[] {
@@ -81,7 +81,7 @@ export function CantorZigzag(): ReactNode {
 
   return (
     <Stepper values={stepperValues} alwaysVisible>
-      {(value: number, _step: number) => {
+      {(value: unknown, _step: number) => {
         const diagsShown = typeof value === "number" ? value : 0;
         const shownCount = computeShownCount(diagsShown);
         const prevCount = computePrevCount(diagsShown);

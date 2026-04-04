@@ -5,7 +5,7 @@ import {
   Text,
   CodeSpan,
 } from "spectacle";
-import { InlineMath, BlockMath } from "../components/Math.tsx";
+import { InlineMath } from "../components/Math.tsx";
 import { CantorZigzag } from "../components/CantorZigzag.tsx";
 import { CantorPairingGrid } from "../components/CantorPairingGrid.tsx";
 
