@@ -22,6 +22,7 @@ import { S16ExpDone } from "./slides/S16ExpDone.tsx";
 import { S17Future } from "./slides/S17Future.tsx";
 import { S18Incompleteness } from "./slides/S18Incompleteness.tsx";
 import { S19Limits } from "./slides/S19Limits.tsx";
+import { S20References } from "./slides/S20References.tsx";
 
 export function App(): ReactNode {
   return (
@@ -46,6 +47,7 @@ export function App(): ReactNode {
         <S17Future />
         <S18Incompleteness />
         <S19Limits />
+        <S20References />
       </Deck>
       <SpeakerNotesPanel notes={speakerNotes} />
     </>

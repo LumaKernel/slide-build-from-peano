@@ -17,7 +17,7 @@ export function S19Limits(): ReactNode {
         <Appear>
           <LegendCard title="表現可能性 (Representability)">
             <Text fontSize="15px" style={{ margin: "0 0 2px 0" }}>
-              PAは<strong>すべての計算可能関数</strong>を表現できる
+              PAは<strong>すべての計算可能関数</strong>を表現できる（逆も成立: 表現可能 = 計算可能）
             </Text>
             <Text fontSize="13px" color="gray" style={{ margin: "0 0 2px 0", paddingLeft: "12px" }}>
               任意の計算可能関数 <InlineMath>f</InlineMath> に対し、PA の論理式{" "}
@@ -26,6 +26,9 @@ export function S19Limits(): ReactNode {
             <div style={{ fontSize: "14px", margin: "0 0 0 0", paddingLeft: "12px" }}>
               <BlockMath>{String.raw`\text{PA} \vdash \varphi(\overline{n},\, \overline{f(n)}) \;\;\text{かつ}\;\; \text{PA} \vdash \forall y\,(\varphi(\overline{n}, y) \to y = \overline{f(n)})`}</BlockMath>
             </div>
+            <Text fontSize="13px" color="gray" style={{ margin: 0, paddingLeft: "12px" }}>
+              計算不可能な関数（例: ビジービーバー <InlineMath>{String.raw`\text{BB}(n)`}</InlineMath>）は表現不能
+            </Text>
           </LegendCard>
         </Appear>
         <Appear>
@@ -58,13 +61,6 @@ export function S19Limits(): ReactNode {
               <InlineMath>{String.raw`\varepsilon_0`}</InlineMath>{" "}
               自身での帰納法は証明できない
             </Text>
-          </LegendCard>
-        </Appear>
-        <Appear>
-          <LegendCard title="参考文献">
-            <Text fontSize="14px" style={{ margin: "0 0 4px 0" }}>数理論理学の基礎テキスト</Text>
-            <Text fontSize="14px" style={{ margin: "0 0 4px 0" }}>ゲーデルの不完全性定理関連</Text>
-            <Text fontSize="14px" style={{ margin: 0 }}>順序数解析、証明論</Text>
           </LegendCard>
         </Appear>
       </FlexBox>
