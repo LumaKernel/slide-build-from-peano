@@ -27,7 +27,7 @@ export function S02Tools(): ReactNode {
         <Appear>
           <LegendCard title="演算">
             <Text fontSize="18px" style={{ margin: 0 }}>
-              <InlineMath>{String.raw`+, \times`}</InlineMath> — いつもの足し算、かけ算
+              <InlineMath>{String.raw`+, \times`}</InlineMath>: いつもの足し算、かけ算
             </Text>
           </LegendCard>
         </Appear>
@@ -45,8 +45,11 @@ export function S02Tools(): ReactNode {
         </Appear>
         <Appear>
           <LegendCard title="等号">
-            <Text fontSize="18px" style={{ margin: 0 }}>
-              等号 <InlineMath>=</InlineMath> — 不等号{" "}
+            <Text fontSize="18px" style={{ margin: "0 0 4px 0" }}>
+              等号 <InlineMath>=</InlineMath>
+            </Text>
+            <Text fontSize="14px" style={{ margin: 0, opacity: 0.7 }}>
+              ※ 不等号{" "}
               <InlineMath>{String.raw`a \neq b`}</InlineMath> は{" "}
               <InlineMath>{String.raw`\lnot(a = b)`}</InlineMath> の糖衣構文
             </Text>
