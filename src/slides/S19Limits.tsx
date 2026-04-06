@@ -16,8 +16,14 @@ export function S19Limits(): ReactNode {
       <FlexBox alignItems="stretch" style={{ gap: "14px", width: "100%", marginTop: "8px" }}>
         <Appear>
           <LegendCard title="限界">
-            <Text fontSize="16px" style={{ margin: "0 0 4px 0" }}>
+            <Text fontSize="16px" style={{ margin: "0 0 2px 0" }}>
               ペアノ算術で表現可能な関数は原始再帰関数を含むが、すべての計算可能関数ではない
+            </Text>
+            <Text fontSize="13px" color="gray" style={{ margin: "0 0 2px 0", paddingLeft: "12px" }}>
+              表現できる: 階乗、フィボナッチ、アッカーマン関数
+            </Text>
+            <Text fontSize="13px" color="gray" style={{ margin: "0 0 6px 0", paddingLeft: "12px" }}>
+              表現できない: グッドスタイン数列の長さ（停止性をPAで証明不能）
             </Text>
             <Text fontSize="16px" style={{ margin: "0 0 4px 0" }}>証明不能だと分かっている命題の例も存在する</Text>
             <Text fontSize="16px" fontWeight="bold" style={{ margin: "0 0 2px 0" }}>
